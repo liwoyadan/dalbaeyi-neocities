@@ -1,0 +1,260 @@
+@import '_patterns';
+
+
+//** Variables **//
+$main-bg: url('https://cdn.discordapp.com/attachments/803461925513723964/1136503357511581747/ripple.jpg');
+$bg: #e6e6f1;
+
+$app-padding: 5vw;
+$border-radius: 0.5rem;
+
+$light: #e3e6eb;
+$dark: #2d2d35;
+
+$primary-100: #477fbe;
+$primary-200: #465470;
+$primary-300: #2b3146;
+
+$success: #77b877;
+$danger: #cc6966;
+$warning: #e2b77c;
+
+//** Mixins **//
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin boxStyling() {
+    background-color: rgba($bg, 0.65);
+    background-image: $bg-pattern;
+    border-radius: $border-radius;
+    box-shadow: rgba($primary-300, 0.25) 0px 54px 55px, rgba($primary-300, 0.12) 0px -12px 30px, rgba($primary-300, 0.12) 0px 4px 6px, rgba($primary-300, 0.17) 0px 12px 13px, rgba($primary-300, 0.09) 0px -3px 5px, rgba($primary-300, 0.2) 0px -3px 0px inset;
+}
+
+//** Layout **//
+
+#app {
+    background: transparent $main-bg no-repeat center center;
+    background-size: cover;
+    color: $dark;
+    height: 100vh;
+    overflow: hidden;
+    padding-left: $app-padding;
+    padding-right: $app-padding;
+}
+
+#headerNav {
+    background-color: $primary-300;
+    //background: linear-gradient(to bottom, $primary-200 0%, $primary-300 100%);
+    border-bottom: 1px solid $primary-200;
+    border-radius: 0 0 $border-radius $border-radius;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+
+    .navbar-brand {
+        color: $light;
+    }
+}
+
+#mainBox {
+    height: 87.5vh;
+    padding: 0;
+    overflow-y: auto;
+
+    @include boxStyling();
+
+    display: flex;
+    flex-direction: column;
+
+    &Container {
+        padding: 0.5rem 0.5rem 0.65rem 0.5rem;
+
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+}
+
+.toolbar {
+    width: 100%;
+
+    &-tabrow {
+        background-color: $primary-300;
+        border-radius: $border-radius $border-radius 0 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.25rem 0.75rem 0 0.75rem;
+        width: 100%;
+
+        &-icons {
+            display: flex;
+            align-items: center;
+            
+            i {
+                padding: 0 0.25rem;
+
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                &.fa-window-minimize {
+                    color: $warning;
+                }
+
+                &.fa-window-restore {
+                    color: $success;
+                }
+
+                &.fa-xmark {
+                    color: $danger;
+                }
+            }
+        }
+    }
+
+    &-tab {
+        background-color: $primary-200;
+        border-radius: $border-radius $border-radius 0 0;
+        color: $light;
+        padding: 0.25rem 0.75rem;
+        margin-bottom: -1px;
+    }
+
+    &-search, &-linkbar {
+        background-color: $primary-200;
+        border-bottom: 1px solid darken($primary-200, 5%);
+        padding: 0.15rem 0.75rem;
+    }
+
+    &-search {
+        border-top: 1px solid darken($primary-200, 5%);
+        color: $light;
+
+        &-bar {
+            background-color: rgba($primary-300, 0.65);
+            border-radius: $border-radius;
+            padding: 0 0.5rem;
+
+            display: flex;
+            align-items: center;
+
+            i {
+                margin-right: 0.25rem;
+            }
+        }
+
+        i.fa-angle-right {
+            color: rgba($light, 0.55);
+        }
+    }
+
+    &-link {
+        padding: 0 0.25rem;
+        letter-spacing: 1px;
+
+        a {
+            color: $primary-100;
+        }
+    }
+}
+
+main {
+    background-color: rgba($light, 0.85);
+    border-radius: $border-radius;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+
+    &-box {
+        display: flex;
+        flex-direction: column;
+        @include boxStyling();
+
+        &:nth-child(2) {
+            margin-top: 1rem;
+            flex-grow: 2;
+        }
+
+        &-container {
+            padding: 0.35rem 0.35rem 0.45rem 0.35rem;
+
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        &-inner {
+            background-color: rgba($light, 0.75);
+            border-radius: $border-radius;
+            height: 100%;
+        }
+
+        &-header {
+            background: $sidebar-header;
+            background-color: $primary-200;
+            border-radius: $border-radius $border-radius 0 0;
+            height: 150px;
+        }
+
+        &-icon {
+            margin-top: -125px;
+            text-align: center;
+
+            img {
+                border: 5px solid $primary-200;
+                border-radius: 50%;
+                box-sizing: content-box;
+                max-height: 150px;
+                max-width: 150px;
+            }
+        }
+    }
+
+    .toolbar {
+        font-size: 0.8rem;
+    }
+
+    .toolbar-tab {
+        padding: 0.15rem 0.5rem;
+    }
+
+    @media (max-width: 991px) {
+        position: absolute;
+        background-color: rgba($dark, 0.85);
+        z-index: 3;
+        right: 0px;
+        bottom: 0px;
+        top: 5rem;
+        overflow-y: scroll;
+
+        left: 100%;
+        transition: left 0.2s;
+
+        &.active {
+            left: 0%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #app {
+        position: relative;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+}

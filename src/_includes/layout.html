@@ -17,8 +17,79 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/dalbaeyi.css">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="/css/all.min.css">
 </head>
 <body>
-    {{ content }}
+    <div class="container-fluid" id="app">
+        <!-- Header Nav -->
+        {% include 'topnav.html' %}
+
+        <div class="row g-0" id="appRow">
+            <div class="col-md-9 pe-md-3">
+                <!-- Main Content -->
+                <div id="mainBox">
+                    <div class="toolbar">
+                        <div class="toolbar-tabrow">
+                            <div class="toolbar-tab">
+                                <i class="fa-solid fa-raindrops me-1"></i> {{ title | default: "dalbaeyi" }}
+                            </div>
+
+                            <div class="toolbar-tabrow-icons">
+                                <i class="fa-solid fa-window-minimize"></i>
+                                <i class="fa-solid fa-window-restore"></i>
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+
+                        <div class="row g-0 toolbar-search">
+                            <div class="col-md-1 d-flex justify-content-between align-items-center pe-3 mobile-hidden">
+                                <i class="fa-regular fa-angle-left"></i>
+                                <i class="fa-regular fa-angle-right"></i>
+                                <i class="fa-solid fa-rotate-right"></i>
+                            </div>
+
+                            <div class="col-md-10">
+                                <div class="toolbar-search-bar">
+                                    <i class="fa-solid fa-fish-bones"></i>
+                                    <span>https://dalbaeyi.neocities.org</span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-1 d-flex justify-content-between align-items-center ps-3 mobile-hidden">
+                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-arrow-down-to-line"></i>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </div>
+                        </div>
+
+                        <div class="toolbar-linkbar">
+                            {% include 'linkbar.html' %}
+                        </div>
+                    </div>
+
+                    <div id="mainBoxContainer">
+                        <main>
+                            {{ content }}
+                        </main>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 ps-md-3 py-3 sidebar" id="sidebar">
+                <!-- Sidebar -->
+                {% include 'sidebar.html' %}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileSidebar() {
+            var sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
