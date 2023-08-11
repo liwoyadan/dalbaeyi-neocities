@@ -57,6 +57,8 @@ a {
 ::-webkit-scrollbar-track {
     background: $primary-100;
     border-radius: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
   /* Handle */
@@ -153,6 +155,11 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 991px) {
+        height: unset;
+        overflow-y: visible;
+    }
 
     &Container {
         padding: 0.5rem 0.5rem 0.65rem 0.5rem;
@@ -346,7 +353,7 @@ main {
 
     &-content {
         font-size: 0.85rem;
-        max-height: 50px;
+        max-height: 75px;
         overflow-y: auto;
 
         ul {
@@ -377,6 +384,54 @@ main {
 
     .mobile-hidden {
         display: none!important;
+    }
+}
+
+/* Front Page */
+
+.front {
+    padding: 0;
+
+    &-header {
+        border-radius: $border-radius $border-radius 0 0;
+        min-height: 350px;
+
+        &-content {
+            background: linear-gradient(to bottom, transparent 65%, $dark 100%);
+            height: 350px;
+            padding: 0.25rem 1rem;
+            width: 100%;
+
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+        }
+
+        &-title {
+            background: linear-gradient(to bottom, $primary-100 0%, $light 100%);
+            background-clip: text;
+            font-family: $novasquare;
+            font-size: 3rem;
+            text-transform: uppercase;
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        a {
+            color: $light;
+            opacity: 0.25;
+            transition: opacity 150ms linear;
+
+            &:hover {
+                opacity: 0.55;
+            }
+        }
+    }
+
+    &-chat {
+        background-color: lighten($light, 5%);
+        border-radius: $border-radius;
     }
 }
 
@@ -419,12 +474,15 @@ main {
         font-family: $novasquare;
         font-size: 1.1em;
 
+        display: flex;
+        align-items: center;
+
         &::before {
             //chevron right
             content: "\f324";
             color: $primary-200;
             font-family: $fa-solid;
-            font-size: 0.85em;
+            font-size: 0.65em;
             margin-right: 0.25rem;
         }
     }
@@ -437,7 +495,9 @@ main {
         &::before {
             //arrow turn down right
             content: "\e3d6";
+            color: $primary-100;
             font-family: $fa-solid;
+            opacity: 0.55;
         }
     }
 }
