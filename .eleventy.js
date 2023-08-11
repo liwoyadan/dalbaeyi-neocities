@@ -28,6 +28,13 @@ module.exports = function (eleventyConfig) {
         }
     });
 
+    // Art Credit Shortcode
+    eleventyConfig.addShortcode("artCredits", function(artist, url) {
+        var span = '<span style="font-size: 0.55rem;">art by <a href="' + url +'">' + artist + '</a></span>'
+
+        return span;
+    })
+
     // Resources Shortcode
     eleventyConfig.addPairedShortcode("resource", function(content, title, url) {
         var openingDiv = '<div class="resource">'
