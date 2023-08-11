@@ -72,24 +72,33 @@
 
                     <div id="mainBoxContainer">
                         <main>
-                            {{ content }}
+                            <div id="mainBoxWrapper">
+                                {{ content }}
+                            </div>
                         </main>
                     </div>
                 </div>
             </div>
 
-            <div class="col-md-3 ps-md-3 py-3 sidebar" id="sidebar">
+            <div class="col-md-3 ps-md-3 py-3 sidebar mobile-hidden" id="sidebar">
                 <!-- Sidebar -->
+                {% include 'sidebar.html' %}
+            </div>
+        </div>
+
+        <!-- Offcanvas for mobile sidebar -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="mobileSidebar" aria-labelledby="mobileSidebarLabel">
+            <div class="offcanvas-header justify-content-end">
+                <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+
+            <div class="offcanvas-body">
                 {% include 'sidebar.html' %}
             </div>
         </div>
     </div>
 
     <script>
-        function toggleMobileSidebar() {
-            var sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('active');
-        }
     </script>
 </body>
 </html>

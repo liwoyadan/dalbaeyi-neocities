@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg" id="headerNav">
     <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#topnavContent" aria-controls="topnavContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa-solid fa-chevrons-down"></i>
         </button>
 
         <a class="navbar-brand" href="/">
@@ -9,9 +9,9 @@
             Dalbaeyi
         </a>
 
-        <button class="navbar-toggler" type="button" id="#mobileSidebarButton" onclick="toggleMobileSidebar()" aria-label="Toggle sidebar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <a class="btn navbar-toggler" data-bs-toggle="offcanvas" href="#mobileSidebar" role="button" aria-controls="mobileSidebar">
+            <i class="fa-solid fa-chevrons-left"></i>
+        </a>
     </div>
 
     <div class="collapse navbar-collapse" id="topnavContent">
@@ -22,12 +22,10 @@
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                    Dropdown 1
+                    Resources
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">One</a></li>
-                    <li><a class="dropdown-item" href="#">Two</a></li>
-                    <li><a class="dropdown-item" href="#">Three</a></li>
+                    <li><a class="dropdown-item" href="/resources/frontend">Frontend</a></li>
                 </ul>
             </li>
 
