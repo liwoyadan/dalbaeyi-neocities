@@ -32,7 +32,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPairedShortcode("resource", function(content, title, url) {
         var openingDiv = '<div class="resource">'
         var link = '<div class="resource-title"><a href="' + url + '">' + title + '</a></div>'
-        var contentDiv = '<div class="resource-content ps-4">' + content + '</div>'
+        var contentDiv = '<div class="resource-content">' + content + '</div>'
         var closingDiv = '</div>'
 
         return openingDiv + link + contentDiv + closingDiv;

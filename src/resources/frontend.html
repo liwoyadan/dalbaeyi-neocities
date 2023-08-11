@@ -1,0 +1,152 @@
+---
+layout: layout.html
+title: Frontend Resources
+---
+
+<div class="container-fluid">
+    <div class="row g-0">
+        <div class="col-md-3 p-1 d-flex flex-column">
+            <nav id="resourceNav" class="navbar">
+                <ul class="nav nav-pills flex-column w-100">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#collections">Collections & Lessons</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formatting">Formatting & Processing</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#frameworks">Frameworks</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fonts">Fonts</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#neocities">Neocities</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="col-md-9 p-1">
+            <div id="resources">
+                <div class="resource-box">
+                    <div class="resource-header" id="collections"><i class="fa-solid fa-boxes-stacked"></i> Collections & Lessons</div>
+                
+                    {% resource "30 Seconds of Code" "https://www.30secondsofcode.org" %}
+                        A lot of useful code snippets for Javascript, CSS, and more.
+                    {% endresource %}
+                
+                    {% resource "Evernote.Design" "https://www.evernote.design" %}
+                        Massive collection of design resources and tools. Some links are broken or defunct, though.
+                    {% endresource %}
+                
+                    {% resource "Web Dev For Beginners" "https://microsoft.github.io/Web-Dev-For-Beginners/#/" %}
+                        Microsoft's free beginner web development curriculum, which features 24 lessons.
+                    {% endresource %}
+                
+                    {% resource "30 Days of Javascript" "https://github.com/Asabeneh/30-Days-Of-JavaScript" %}
+                        A free 30-day curriculum for getting a handle on Javascript.
+                    {% endresource %}
+                </div>
+                
+                <div class="resource-box">
+                    <div class="resource-header" id="formatting"><i class="fa-solid fa-file-dashed-line"></i> Formatting & Processing</div>
+                    {% resource "Sass" "https://sass-lang.com" %}
+                        A preprocessor that extends CSS with variables, mixins, and more. I use this for almost all my CSS work.
+                    {% endresource %}
+                
+                    {% resource "Prettier" "https://prettier.io" %}
+                        An "opinionated code formatter" that supports a variety of different languages.
+                    {% endresource %}
+                
+                    {% resource "Autoprefixer" "https://autoprefixer.github.io" %}
+                        A tool that'll automatically add vendor prefixes into your CSS for wide browser support.
+                    {% endresource %}
+                </div>
+                
+                <div class="resource-box">
+                    <div class="resource-header" id="frameworks"><i class="fa-solid fa-frame"></i> Frameworks</div>
+                
+                    {% resource "Bootstrap" "https://getbootstrap.com" %}
+                        Popular framework primarily for mobile responsive design. I also used parts of Bootstrap (v5.3) to create this site.
+                    {% endresource %}
+                
+                    {% resource "Tailwind" "https://tailwindcss.com" %}
+                        Utility-first; doesn't have pre-defined components like Bootstrap does and instead you build everything with classes.
+                    {% endresource %}
+                
+                    {% resource "Chota" "https://jenil.github.io/chota/" %}
+                        A very tiny, lightweight framework.
+                    {% endresource %}
+                
+                    {% resource "NES.css" "https://nostalgic-css.github.io/NES.css/" %}
+                        A CSS framework in NES style.
+                    {% endresource %}
+                
+                    {% resource "98.css" "https://jdan.github.io/98.css/" %}
+                        A CSS framework in the style of Windows 98.
+                    {% endresource %}
+                
+                    {% resource "XP.css" "https://botoxparty.github.io/XP.css/" %}
+                        A CSS framework in the style of Windows XP.
+                    {% endresource %}
+                
+                    {% resource "7.css" "https://khang-nd.github.io/7.css/" %}
+                        A CSS framework in the style of Windows 7.
+                    {% endresource %}
+                </div>
+                
+                <div class="resource-box">
+                    <div class="resource-header" id="fonts"><i class="fa-solid fa-message-text"></i> Fonts</div>
+                
+                    {% resource "Google Fonts" "https://fonts.google.com" %}
+                        Good old Google Fonts. A collection of free fonts that can be used commercially.
+                    {% endresource %}
+                
+                    {% resource "Adobe Fonts" "https://fonts.adobe.com/fonts" %}
+                        Adobe's free font library. These can also be used commercially. Some may require a Creative Cloud subscription.
+                    {% endresource %}
+                
+                    {% resource "Font Squirrel" "https://www.fontsquirrel.com" %}
+                        More free fonts. Their webfont generator is especially useful for converting fonts to woff/woff2.
+                    {% endresource %}
+                
+                    {% resource "Fontjoy" "https://fontjoy.com" %}
+                        Generate font pairings based on contrast/similarity. Uses Google Fonts.
+                    {% endresource %}
+                
+                    {% resource "Wakamai Fondue" "https://wakamaifondue.com" %}
+                        A site that'll take whatever font you drop in it and give you an analysis.
+                    {% endresource %}
+                
+                    {% resource "Typography Handbook" "https://typographyhandbook.com" %}
+                        Some reading on typography, choosing fonts, using them, etc.
+                    {% endresource %}
+                </div>
+                
+                <div class="resource-box">
+                    <div class="resource-header" id="neocities"><i class="fa-solid fa-cat"></i> Neocities-Related</div>
+                
+                    {% resource "Neocities Tutorials" "https://neocities.org/tutorials" %}
+                        Neocities' own tutorials on HTML, CSS, Javascript, and more.
+                    {% endresource %}
+                
+                    {% resource "Zonelets" "https://zonelets.net" %}
+                        A simple blogging engine for Neocities where posts are written in HTML.
+                    {% endresource %}
+                
+                    {% resource "Gifypet" "https://gifypet.neocities.org" %}
+                        Create your own interactable gif pet that you can embed on your site.
+                    {% endresource %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
