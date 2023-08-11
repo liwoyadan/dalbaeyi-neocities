@@ -9,6 +9,10 @@ title: Frontend Resources
             <nav id="resourceNav" class="navbar">
                 <ul class="nav nav-pills flex-column w-100">
                     <li class="nav-item">
+                        <a class="nav-link" href="#accessibility">Accessibility</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="#collections">Collections & Lessons</a>
                     </li>
                     
@@ -21,11 +25,31 @@ title: Frontend Resources
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link" href="#designwork">Designwork</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#colours">Colours</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="#fonts">Fonts</a>
                     </li>
 
                     <li class="nav-item">
+                        <a class="nav-link" href="#elements">Elements & Effects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tools">Tools & Generators</a>
+                    </li>
+
+                    <li class="nav-item">
                         <a class="nav-link" href="#neocities">Neocities</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stack">Stack Overflow</a>
                     </li>
                 </ul>
             </nav>
@@ -34,10 +58,24 @@ title: Frontend Resources
         <div class="col-md-9 p-1">
             <div id="resources">
                 <div class="resource-box">
+                    <div class="resource-header" id="accessibility"><i class="fa-solid fa-universal-access"></i> Accessibility</div>
+                    {% resource "Accessiblity Cheatsheet" "https://moritzgiessmann.de/accessibility-cheatsheet/" %}
+                        An easy to read cheatsheet on web accessibility.
+                    {% endresource %}
+
+                    {% resource "Accessible Colors" "https://accessible-colors.com" %}
+                        A site that will evaluate the contrast ratio of your chosen text and background colour and tells you if it passes AA or AAA guidelines. If it fails, the site will tell you the closest accessible colour combination.
+                    {% endresource %}
+                </div>
+
+                <div class="resource-box">
                     <div class="resource-header" id="collections"><i class="fa-solid fa-boxes-stacked"></i> Collections & Lessons</div>
-                
-                    {% resource "30 Seconds of Code" "https://www.30secondsofcode.org" %}
-                        A lot of useful code snippets for Javascript, CSS, and more.
+                    {% resource "W3Schools" "https://www.w3schools.com" %}
+                        Great site to use as a reference or to learn various coding languages.
+                    {% endresource %}
+
+                    {% resource "Web Design Museum" "https://www.webdesignmuseum.org" %}
+                        Screnshots of sites from the 90s to 00s. Great for inspiration.
                     {% endresource %}
                 
                     {% resource "Evernote.Design" "https://www.evernote.design" %}
@@ -66,11 +104,14 @@ title: Frontend Resources
                     {% resource "Autoprefixer" "https://autoprefixer.github.io" %}
                         A tool that'll automatically add vendor prefixes into your CSS for wide browser support.
                     {% endresource %}
+
+                    {% resource "Online CSS Minifier" "https://www.toptal.com/developers/cssminifier" %}
+                        Page that will minify your CSS for you. Also has API access.
+                    {% endresource %}
                 </div>
                 
                 <div class="resource-box">
                     <div class="resource-header" id="frameworks"><i class="fa-solid fa-frame"></i> Frameworks</div>
-                
                     {% resource "Bootstrap" "https://getbootstrap.com" %}
                         Popular framework primarily for mobile responsive design. I also used parts of Bootstrap (v5.3) to create this site.
                     {% endresource %}
@@ -99,10 +140,63 @@ title: Frontend Resources
                         A CSS framework in the style of Windows 7.
                     {% endresource %}
                 </div>
+
+                <div class="resource-box">
+                    <div class="resource-header" id="designwork"><i class="fa-solid fa-images"></i> Designwork</div>
+                    {% resource "Unsplash" "https://unsplash.com" %}
+                        Thousands of free to use photos; I use this site for most of my site backgrounds.
+                    {% endresource %}
+
+                    {% resource "rawpixel" "https://www.rawpixel.com" %}
+                        Has free and public domain images that can be used in projects. Note that rawpixel retains copyright on free images.
+                    {% endresource %}
+
+                    {% resource "Haikei" "https://app.haikei.app" %}
+                        An app that allows you to generate all sorts of shapes and blobs and save them as either SVG or PNG.
+                    {% endresource %}
+
+                    {% resource "Subtle Patterns" "https://www.toptal.com/designers/subtlepatterns/" %}
+                        Tiling patterns that can be used as backgrounds.
+                    {% endresource %}
+
+                    {% resource "Transparent Textures" "https://www.transparenttextures.com" %}
+                        Addendum to the above, dozens of tiling patterns turned transparent.
+                    {% endresource %}
+
+                    {% resource "Hero Patterns" "https://heropatterns.com" %}
+                        A collection of tiling SVG backgrounds. I use a few backgrounds from here on this site.
+                    {% endresource %}
+
+                    {% resource "CSS3 Patterns Gallery" "https://projects.verou.me/css3patterns/" %}
+                        A bunch of CSS pattern backgrounds under MIT license.
+                    {% endresource %}
+
+                    {% resource "FontAwesome" "https://fontawesome.com" %}
+                        Huge icon library with thousands of icons. I use it on this site.
+                    {% endresource %}
+                
+                    {% resource "Textures @ Neocities" "https://textures.neocities.org" %}
+                        A few thousand textures that can be used either on 3D models or on sites.
+                    {% endresource %}
+                
+                    {% resource "99 Gif Shop" "https://99gifshop.neocities.org" %}
+                        Massive collection of old web style gifs.
+                    {% endresource %}
+                </div>
+
+                <div class="resource-box">
+                    <div class="resource-header" id="colours"><i class="fa-solid fa-palette"></i> Colours</div>
+                    {% resource "Realtime Colors" "https://realtimecolors.com/" %}
+                        Another site where you can preview your chosen colours live on a page.
+                    {% endresource %}
+
+                    {% resource "ColorSpace" "https://mycolor.space" %}
+                        Enter a single colour and the site will generate a variety of palettes for you.
+                    {% endresource %}
+                </div>
                 
                 <div class="resource-box">
                     <div class="resource-header" id="fonts"><i class="fa-solid fa-message-text"></i> Fonts</div>
-                
                     {% resource "Google Fonts" "https://fonts.google.com" %}
                         Good old Google Fonts. A collection of free fonts that can be used commercially.
                     {% endresource %}
@@ -118,6 +212,10 @@ title: Frontend Resources
                     {% resource "Fontjoy" "https://fontjoy.com" %}
                         Generate font pairings based on contrast/similarity. Uses Google Fonts.
                     {% endresource %}
+
+                    {% resource "Fontpair" "https://www.fontpair.co" %}
+                        Collection of font pairings from across the web.
+                    {% endresource %}
                 
                     {% resource "Wakamai Fondue" "https://wakamaifondue.com" %}
                         A site that'll take whatever font you drop in it and give you an analysis.
@@ -127,10 +225,43 @@ title: Frontend Resources
                         Some reading on typography, choosing fonts, using them, etc.
                     {% endresource %}
                 </div>
+
+                <div class="resource-box">
+                    <div class="resource-header" id="elements"><i class="fa-solid fa-sparkles"></i> Elements & Effects</div>
+                    {% resource "UIverse" "https://uiverse.io" %}
+                        Open-source elements under MIT license. Includes buttons, cards, and more.
+                    {% endresource %}
+
+                    {% resource "Copy & Paste CSS" "https://copy-paste-css.com" %}
+                        Buttons, box shadows, forms, and palettes from around the web.
+                    {% endresource %}
+
+                    {% resource "ui-buttons" "https://ui-buttons.web.app" %}
+                        A bunch of animated button effects. MIT license.
+                    {% endresource %}
+
+                    {% resource "30 Seconds of Code" "https://www.30secondsofcode.org" %}
+                        A lot of useful code snippets for Javascript, CSS, and more.
+                    {% endresource %}
+
+                    {% resource "Stack Sorted." "https://stacksorted.com" %}
+                        A big inspiration library for all sorts of elements. Code is copyrighted to their owners, as this site just links to other sites that have interesting elements.
+                    {% endresource %}
+                </div>
+
+                <div class="resource-box">
+                    <div class="resource-header" id="tools"><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Generators</div>
+                    {% resource "Omatsuri" "https://omatsuri.app" %}
+                        An app that has a variety of tools from triangles to gradients to even fake data generation.
+                    {% endresource %}
+
+                    {% resource "CSS Background Patterns" "https://www.magicpattern.design/tools/css-backgrounds" %}
+                        Pure CSS background patterns. Allows you to adjust colour, opacity, and spacing of the patterns.
+                    {% endresource %}
+                </div>
                 
                 <div class="resource-box">
                     <div class="resource-header" id="neocities"><i class="fa-solid fa-cat"></i> Neocities-Related</div>
-                
                     {% resource "Neocities Tutorials" "https://neocities.org/tutorials" %}
                         Neocities' own tutorials on HTML, CSS, Javascript, and more.
                     {% endresource %}
@@ -141,6 +272,13 @@ title: Frontend Resources
                 
                     {% resource "Gifypet" "https://gifypet.neocities.org" %}
                         Create your own interactable gif pet that you can embed on your site.
+                    {% endresource %}
+                </div>
+
+                <div class="resource-box">
+                    <div class="resource-header" id="stack"><i class="fa-brands fa-stack-overflow"></i> Stack Overflow</div>
+                    {% resource "Converting PNG to Inline SVG" "https://stackoverflow.com/questions/54867986/how-to-convert-png-image-to-inline-svg" %}
+                        Has an answer on converting PNGs to SVGs with free online tools and then using the fill property to colour them.
                     {% endresource %}
                 </div>
             </div>
