@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'PixelOperator';
+    src: url('../webfonts/PixelOperator-Regular.woff2') format('woff2'),
+        url('../webfonts/PixelOperator-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'PixelOperator';
+    src: url('../webfonts/PixelOperator-Bold.woff2') format('woff2'),
+        url('../webfonts/PixelOperator-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Share Tech Mono';
+    src: url('../webfonts/ShareTechMono-Regular.woff2') format('woff2'),
+        url('../webfonts/ShareTechMono-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Fipps';
+    src: url('../webfonts/Fipps-Regular.woff2') format('woff2'),
+        url('../webfonts/Fipps-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'A Goblin Appears';
+    src: url('../webfonts/AGoblinAppears-Regular.woff2') format('woff2'),
+        url('../webfonts/AGoblinAppears-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Nova Square';
+    src: url('../webfonts/NovaSquare-Regular.woff2') format('woff2'),
+        url('../webfonts/NovaSquare-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'FontAwesome Solid';
+    src: url('../webfonts/fa-solid-900.woff2') format('woff2'),
+        url('../webfonts/fa-solid-900.ttf') format('truetype');
+}
+
+$pixeloperator: 'PixelOperator', sans-serif;
+$sharetechmono: 'Share Tech Mono', sans-serif;
+$novasquare: 'Nova Square', sans-serif;
+$fipps: 'Fipps', sans-serif;
+$agoblinappears: 'A Goblin Appears', sans-serif;
+$fa-solid: 'FontAwesome Solid';
