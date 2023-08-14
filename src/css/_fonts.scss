@@ -36,6 +36,21 @@
 }
 
 @font-face {
+    font-family: 'Sunflower';
+    src:url('../webfonts/Sunflower-Regular.ttf') format('truetype'),
+        url('../webfonts/Sunflower-Regular.woff2') format('woff2'),
+        url('../webfonts/Sunflower-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Sunflower';
+    src:url('../webfonts/Sunflower-Bold.ttf') format('truetype'),
+        url('../webfonts/Sunflower-Bold.woff2') format('woff2'),
+        url('../webfonts/Sunflower-Bold.woff') format('woff');
+    font-weight: bold;
+}
+
+@font-face {
     font-family: 'FontAwesome Solid';
     src: url('../webfonts/fa-solid-900.woff2') format('woff2'),
         url('../webfonts/fa-solid-900.ttf') format('truetype');
@@ -46,4 +61,5 @@ $sharetechmono: 'Share Tech Mono', sans-serif;
 $novasquare: 'Nova Square', sans-serif;
 $fipps: 'Fipps', sans-serif;
 $agoblinappears: 'A Goblin Appears', sans-serif;
+$sunflower: 'Sunflower', sans-serif;
 $fa-solid: 'FontAwesome Solid';
