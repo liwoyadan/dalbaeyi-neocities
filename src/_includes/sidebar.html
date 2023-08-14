@@ -1,4 +1,4 @@
-<div class="sidebar-box">
+<div class="sidebar-box" id="sidebarOne">
     <div class="toolbar">
         <div class="toolbar-tabrow">
             <div class="toolbar-tab">
@@ -21,7 +21,19 @@
             </div>
 
             <div class="p-3 pt-0">
-                some text will go here once i think of what to write.
+                <div class="row g-0">
+                    <div class="col-6 p-1">
+                        <div class="box-light">
+                            <div id="sidebarClock"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-6 p-1">
+                        <div class="box-light">
+                            stuff
+                        </div>
+                    </div>
+                </div>
 
                 {% include 'todolist.html' %}
             </div>
@@ -29,7 +41,7 @@
     </div>
 </div>
 
-<div class="sidebar-box">
+<div class="sidebar-box" id="sidebarTwo">
     <div class="toolbar">
         <div class="toolbar-tabrow">
             <div class="toolbar-tab">
