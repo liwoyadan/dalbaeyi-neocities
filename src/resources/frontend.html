@@ -63,6 +63,10 @@ title: Frontend Resources
             <div id="resources">
                 <div class="resource-box">
                     <div class="resource-header" id="accessibility"><i class="fa-solid fa-universal-access"></i> Accessibility</div>
+                    {% resource "W3C Accessibility Principles" "https://www.w3.org/WAI/fundamentals/accessibility-principles/" %}
+                        An introduction to web accessibility requirements. Not a complete list, but good to start with.
+                    {% endresource %}
+
                     {% resource "Accessiblity Cheatsheet" "https://moritzgiessmann.de/accessibility-cheatsheet/" %}
                         An easy to read cheatsheet on web accessibility.
                     {% endresource %}
@@ -85,17 +89,37 @@ title: Frontend Resources
                     {% resource "Web Design Museum" "https://www.webdesignmuseum.org" %}
                         Screnshots of sites from the 90s to 00s. Great for inspiration.
                     {% endresource %}
+
+                    {% resource "Screenlane" "https://screenlane.com" %}
+                        Although no longer actively maintained, this is a good library for mobile design inspiration.
+                    {% endresource %}
                 
                     {% resource "Evernote.Design" "https://www.evernote.design" %}
                         Massive collection of design resources and tools. Some links are broken or defunct, though.
+                    {% endresource %}
+
+                    {% resource "Smashing Magazine - SVG Generators" "https://www.smashingmagazine.com/2021/03/svg-generators/" %}
+                        An article with links to dozens of tools for SVG generation and manipulation.
                     {% endresource %}
                 
                     {% resource "Web Dev For Beginners" "https://microsoft.github.io/Web-Dev-For-Beginners/#/" %}
                         Microsoft's free beginner web development curriculum, which features 24 lessons.
                     {% endresource %}
+
+                    {% resource "web.dev" "https://web.dev/learn/" %}
+                        Various free courses on topics such as CSS, accessibility, privacy, and more.
+                    {% endresource %}
                 
                     {% resource "30 Days of Javascript" "https://github.com/Asabeneh/30-Days-Of-JavaScript" %}
                         A free 30-day curriculum for getting a handle on JavaScript.
+                    {% endresource %}
+
+                    {% resource "Flexbox Froggy" "https://flexboxfroggy.com" %}
+                        A simple browser game that will teach you the basics of flexbox.
+                    {% endresource %}
+
+                    {% resource "CSSBattle" "https://cssbattle.dev" %}
+                        Multiplayer game in which you complete CSS challenges to generate a score. A fun way to practice.
                     {% endresource %}
                 </div>
                 
@@ -163,6 +187,10 @@ title: Frontend Resources
                         A JavaScript animation library that works with CSS properties, SVGs, DOM attributes, and JS objects.
                     {% endresource %}
 
+                    {% resource "ztext.js" "https://bennettfeely.com/ztext/" %}
+                        Small library for creating 3 dimensional text, SVGs, and images 
+                    {% endresource %}
+
                     {% resource "Masonry" "https://masonry.desandro.com" %}
                         For grid layouts; especially useful for making galleries.
                     {% endresource %}
@@ -184,6 +212,10 @@ title: Frontend Resources
                     <div class="resource-header" id="designwork"><i class="fa-solid fa-images"></i> Designwork</div>
                     {% resource "Unsplash" "https://unsplash.com" %}
                         Thousands of free to use photos; I use this site for most of my site backgrounds.
+                    {% endresource %}
+
+                    {% resource "Pexels" "https://www.pexels.com" %}
+                        Like the above; more free to use stock photos for backgrounds and the like.
                     {% endresource %}
 
                     {% resource "rawpixel" "https://www.rawpixel.com" %}
@@ -211,7 +243,11 @@ title: Frontend Resources
                     {% endresource %}
 
                     {% resource "FontAwesome" "https://fontawesome.com" %}
-                        Huge icon library with thousands of icons. I use it on this site.
+                        Huge icon library with thousands of icons. There are free and paid icon kits. I use it on this site.
+                    {% endresource %}
+
+                    {% resource "Icones" "https://icones.js.org" %}
+                        Another expansive icon library under MIT license.
                     {% endresource %}
                 
                     {% resource "Textures @ Neocities" "https://textures.neocities.org" %}
@@ -290,12 +326,44 @@ title: Frontend Resources
 
                 <div class="resource-box">
                     <div class="resource-header" id="tools"><i class="fa-solid fa-screwdriver-wrench"></i> Tools & Generators</div>
+                    {% resource "UpLabs Clip Path Generator" "https://www.uplabs.com/posts/clip-path-generator" %}
+                        Another clip path generator.
+                    {% endresource %}
+
                     {% resource "CSS Gradient" "https://cssgradient.io" %}
                         Easy tool for making gradients that also has a maximum browser compatibility setting for its output.
                     {% endresource %}
 
+                    {% resource "Shadow Palette Generator" "https://www.joshwcomeau.com/shadow-palette/" %}
+                        A generator for box shadows that previews the shadows at three different elevations.
+                    {% endresource %}
+
+                    {% resource "Patternify" "http://www.patternify.com" %}
+                        Pixel-by-pixel tiling background generator; note that the canvas is rather small.
+                    {% endresource %}
+
+                    {% resource "Neumorphism Generator" "https://neumorphism.io/" %}
+                        Generator for neumorphic design.
+                    {% endresource %}
+
+                    {% resource "Favicon Generator" "https://realfavicongenerator.net" %}
+                        Generates favicon files out of a chosen image along with other icons such as iOS/Android.
+                    {% endresource %}
+
+                    {% resource "CSS Generators" "https://css-generators.com" %}
+                        A collection of tools mostly for generating custom borders and shapes through masks and clip paths.
+                    {% endresource %}
+
                     {% resource "Omatsuri" "https://omatsuri.app" %}
                         An app that has a variety of tools from triangles to gradients to even fake data generation.
+                    {% endresource %}
+
+                    {% resource "10015" "https://10015.io/tools/css-background-pattern-generator" %}
+                        Another collection of various tools from lorem ipsum to CSS to minifiers. Link goes to their CSS background pattern generator, which I particularly like.
+                    {% endresource %}
+
+                    {% resource "DOODAD" "https://doodad.dev" %}
+                        Has a background pattern and gradient generator, but more interestingly, a converter for images that uses dithering to reduce their file size.
                     {% endresource %}
 
                     {% resource "CSS Background Patterns" "https://www.magicpattern.design/tools/css-backgrounds" %}
@@ -316,12 +384,24 @@ title: Frontend Resources
                     {% resource "Gifypet" "https://gifypet.neocities.org" %}
                         Create your own interactable gif pet that you can embed on your site.
                     {% endresource %}
+
+                    {% resource "Chattable" "https://chattable.neocities.org" %}
+                        A simple embed live chat for your Neocities site.
+                    {% endresource %}
+
+                    {% resource "Templaterr" "https://templaterr.neocities.org" %}
+                        Some navigation snippets and layout templates intended for Neocities.
+                    {% endresource %}
                 </div>
 
                 <div class="resource-box">
                     <div class="resource-header" id="stack"><i class="fa-brands fa-stack-overflow"></i> Stack Overflow</div>
                     {% resource "Converting PNG to Inline SVG" "https://stackoverflow.com/questions/54867986/how-to-convert-png-image-to-inline-svg" %}
                         Has an answer on converting PNGs to SVGs with free online tools and then using the fill property to colour them.
+                    {% endresource %}
+
+                    {% resource "Darkening/Lightening CSS Variables Like SCSS" "https://stackoverflow.com/questions/55329996/how-to-create-color-shades-using-css-variables-similar-to-darken-of-sass/55330103#55330103" %}
+                        Ways to modify plain CSS colour variables like the darken() and lighten() function in SCSS. The solution suggests using color-mix(), but I've mostly used the old answer where the variables are in HSL.
                     {% endresource %}
                 </div>
             </div>
