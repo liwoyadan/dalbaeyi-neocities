@@ -586,6 +586,11 @@ main {
             margin-right: 0.25rem;
         }
     }
+
+    &-scroll-300 {
+        height: 300px;
+        overflow: auto;
+    }
 }
 
 ul.list-diamond {
@@ -605,6 +610,22 @@ ul.list-diamond {
         font-size: 0.45rem;
         margin-left: -1rem;
         margin-right: 0.25rem;
+    }
+
+    &.diamond-top li {
+        align-items: start;
+
+        &::before {
+            margin-top: 0.5rem;
+        }
+    }
+
+    &.dividers li {
+        border-bottom: 1px dotted $primary-100;
+
+        &:last-child {
+            border-bottom: 0;
+        }
     }
 }
 
@@ -659,5 +680,35 @@ ul.list-diamond {
 
     75% {
         transform: rotate(-5deg);
+    }
+}
+
+.animation-sprite {
+    animation: spriteBounce 1s linear infinite;
+}
+
+.animation-sprite-hover:hover {
+    animation: spriteBounce 1s linear infinite;
+}
+
+@keyframes spriteBounce {
+    0% {
+        transform: translateY(0px);
+    }
+
+    49% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    99% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
     }
 }

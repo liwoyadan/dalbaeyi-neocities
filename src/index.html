@@ -5,7 +5,7 @@ title: Home
 
 <div class="container-fluid front">
     <!-- Header Image -->
-    <div class="front-header" style="background-image: url('/img/mio-header.png'); background-size: 100%; background-position: 5% 25%;">
+    <div class="front-header" style="background-image: url('/img/mio-header.webp'); background-size: 100%; background-position: 5% 25%;">
         <div class="front-header-content">
             <span>
                 <a href="https://twitter.com/MANTISPIRE" data-bs-toggle="tooltip" data-bs-title="Art by Mantispire">
@@ -41,12 +41,16 @@ title: Home
 
     <!-- First Row -->
     <div class="row g-0">
-        <div class="col-md-9 p-1">
+        <div class="col-md-6 p-1">
             <p class="p-3">hi this is a personal website that's heavily a wip...sorry for the mess!</p>
         </div>
 
         <div class="col-md-3 p-1">
-            <div class="front-chat">
+            {% include 'updates.html' %}
+        </div>
+
+        <div class="col-md-3 p-1">
+            <div class="front-chat box-shaded">
                 {% include 'chatbox.html' %}
             </div>
         </div>
