@@ -1,5 +1,6 @@
 const sass = require("sass");
 const path = require("path");
+const footnotes = require("eleventy-plugin-footnotes");
 
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/css");
@@ -28,12 +29,21 @@ module.exports = function (eleventyConfig) {
         }
     });
 
+    //Footnotes Plugin
+    eleventyConfig.addPlugin(footnotes, {
+        title: "Footnotes",
+        classes: {
+            title: 'footnotes-title',
+            list: 'text-spacing-less',
+        },
+    });
+
     // Art Credit Shortcode
     eleventyConfig.addShortcode("artCredits", function(artist, url) {
         var span = '<span style="font-size: 0.55rem;">art by <a href="' + url +'">' + artist + '</a></span>'
 
         return span;
-    })
+    });
 
     // Resources Shortcode
     eleventyConfig.addPairedShortcode("resource", function(content, title, url) {

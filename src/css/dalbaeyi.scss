@@ -561,6 +561,23 @@ main {
     }
 }
 
+/* Footnotes */
+
+.footnotes {
+    &-title {
+        color: $primary-200;
+        font-family: $agoblinappears;
+        font-size: 1.15rem;
+        text-decoration: underline dotted $primary-100 1px;
+
+        &::after {
+            content: '\f3be';
+            font-family: $fa-solid;
+            margin-left: 0.25rem;
+        }
+    }
+}
+
 /* Misc. Stuff */
 
 .box {
