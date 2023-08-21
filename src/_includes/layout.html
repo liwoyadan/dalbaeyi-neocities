@@ -1,29 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ title | default: "dalbaeyi" }}</title>
-
-    <meta name="title" content="title">
-    <meta name="description" content="...">
-
-    <meta name="robots" content="noai">
-    <meta name="robots" content="noimageai">
-
-    <!-- JS -->
-    <script src="/js/jquery-3.7.0.min.js"></script>
-    <script src="/js/jquery-ui.min.js"></script>
-    <script src="/js/bootstrap.bundle.min.js"></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/jquery-ui.min.css">
-    <link rel="stylesheet" href="/css/dalbaeyi.css?v=1.1">
-
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="/css/all.min.css">
+    {% include 'head.html' %}
+    {% block head %}{% endblock %}
 </head>
 <body>
     <div class="container-fluid" id="app">
@@ -76,7 +55,7 @@
                     <div id="mainBoxContainer">
                         <main>
                             <div id="mainBoxWrapper">
-                                {{ content }}
+                                {% block content %}{{ content }}{% endblock %}
                             </div>
                         </main>
                     </div>
