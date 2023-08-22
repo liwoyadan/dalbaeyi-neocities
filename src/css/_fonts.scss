@@ -51,6 +51,17 @@
 }
 
 @font-face {
+    font-family: 'Noto Sans TC';
+    src:url('../webfonts/NotoSansTC-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Noto Sans TC';
+    src:url('../webfonts/NotoSansTC-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
     font-family: 'FontAwesome Solid';
     src: url('../webfonts/fa-solid-900.woff2') format('woff2'),
         url('../webfonts/fa-solid-900.ttf') format('truetype');
@@ -62,4 +73,5 @@ $novasquare: 'Nova Square', sans-serif;
 $fipps: 'Fipps', sans-serif;
 $agoblinappears: 'A Goblin Appears', sans-serif;
 $sunflower: 'Sunflower', sans-serif;
+$notosanstc: 'Noto Sans TC', sans-serif;
 $fa-solid: 'FontAwesome Solid';

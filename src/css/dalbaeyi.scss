@@ -2,7 +2,7 @@
 @import '_fonts';
 
 //** Variables **//
-$main-bg: url('https://cdn.discordapp.com/attachments/803461925513723964/1136503357511581747/ripple.jpg');
+$main-bg: url('/img/ripple.webp');
 $bg: #e6e6f1;
 
 $app-padding: 5vw;
@@ -561,14 +561,61 @@ main {
     }
 }
 
+/* Yokwe */
+
+.yokwe {
+    &-title-en {
+        color: $primary-200;
+        font-family: $novasquare;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    &-title-kr {
+        color: lighten($primary-100, 20%);
+        font-family: $sunflower;
+        font-size: 1.75rem;
+        text-shadow: 
+            3px 3px 0px darken($primary-300, 5%),
+            2px 2px 0px darken($primary-300, 5%),
+            1px 1px 0px darken($primary-300, 5%);
+    }
+
+    &-title-hj {
+        color: lighten($primary-200, 25%);
+        font-family: $notosanstc;
+        font-weight: bold;
+    }
+
+    &-header {
+        background: linear-gradient(to left, transparent 0%, $primary-300 100%);
+        line-height: 200%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-nova {
+            color: $primary-200;
+            font-family: $novasquare;
+            font-size: 1.5rem;
+        }
+    }
+}
+
 /* Footnotes */
 
 .footnotes {
     &-title {
+        background: linear-gradient(to bottom, $primary-300 0%, $primary-200 50%, $primary-100 100%);
         color: $primary-200;
         font-family: $agoblinappears;
         font-size: 1.15rem;
-        text-decoration: underline dotted $primary-100 1px;
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
         &::after {
             content: '\f3be';
@@ -576,6 +623,15 @@ main {
             margin-left: 0.25rem;
         }
     }
+}
+
+body { counter-reset: footnotes }
+
+[role="doc-noteref"]::after {
+    counter-increment: footnotes;
+    content: '[' counter(footnotes) ']';
+    font-size: 0.75rem;
+    vertical-align: super;
 }
 
 /* Misc. Stuff */
@@ -587,8 +643,18 @@ main {
         padding: 0.5rem;
     }
 
+    &-dark {
+        background-color: $primary-200;
+        border-radius: $border-radius;
+        padding: 0.5rem;
+    }
+
     &-shaded {
         box-shadow: rgba($primary-100, 0.2) 0px -3px 0px inset, rgba($primary-100, 0.15) 0 0 0 1px inset;
+    }
+
+    &-shaded-dark {
+        box-shadow: rgba($primary-300, 0.45) 0px -3px 0px inset, rgba($primary-300, 0.45) 0 0 0 1px inset;
     }
 
     &-fipps-header {
@@ -664,8 +730,16 @@ ul.list-diamond {
     font-family: $sunflower!important;
 }
 
+.font-cn {
+    font-family: $notosanstc!important;
+}
+
 .font-fipps {
     font-family: $fipps!important;
+}
+
+.text-spacing-reg {
+    letter-spacing: normal;
 }
 
 .text-spacing-less {
