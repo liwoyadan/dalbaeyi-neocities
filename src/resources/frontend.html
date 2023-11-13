@@ -15,6 +15,10 @@ title: Frontend Resources
                     <li class="nav-item">
                         <a class="nav-link" href="#collections">Collections & Lessons</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#youtube">Youtube</a>
+                    </li>
                     
                     <li class="nav-item">
                         <a class="nav-link" href="#formatting">Formatting & Processing</a>
@@ -60,6 +64,10 @@ title: Frontend Resources
         </div>
 
         <div class="col-md-9 p-1">
+            <div class="resource-box text-center">
+                <span class="small text-muted text-spacing-less">Sites listed here are not necessarily an endorsement; this is an aggregation of various resources I have come across the web or have been suggested. If there is an issue with a listed resource, let me know.</span>
+            </div>
+
             <div id="resources">
                 <div class="resource-box">
                     <div class="resource-header" id="accessibility"><i class="fa-solid fa-universal-access"></i> Accessibility</div>
@@ -82,8 +90,12 @@ title: Frontend Resources
 
                 <div class="resource-box">
                     <div class="resource-header" id="collections"><i class="fa-solid fa-boxes-stacked"></i> Collections & Lessons</div>
+                    {% resource "MDN Web Docs" "https://developer.mozilla.org/en-US/" %}
+                        The MDN documentation for HTML, CSS, and Javascript.
+                    {% endresource %}
+
                     {% resource "W3Schools" "https://www.w3schools.com" %}
-                        Great site to use as a reference or to learn various coding languages.
+                        Good site to use as a reference or to learn various coding bits.
                     {% endresource %}
 
                     {% resource "Web Design Museum" "https://www.webdesignmuseum.org" %}
@@ -100,6 +112,10 @@ title: Frontend Resources
 
                     {% resource "Smashing Magazine - SVG Generators" "https://www.smashingmagazine.com/2021/03/svg-generators/" %}
                         An article with links to dozens of tools for SVG generation and manipulation.
+                    {% endresource %}
+
+                    {% resource "CSS-Tricks" "https://css-tricks.com" %}
+                        Now dead, but contains many useful articles and insights on CSS and web design.
                     {% endresource %}
                 
                     {% resource "Web Dev For Beginners" "https://microsoft.github.io/Web-Dev-For-Beginners/#/" %}
@@ -120,6 +136,21 @@ title: Frontend Resources
 
                     {% resource "CSSBattle" "https://cssbattle.dev" %}
                         Multiplayer game in which you complete CSS challenges to generate a score. A fun way to practice.
+                    {% endresource %}
+                </div>
+
+                <div class="resource-box">
+                    <div class="resource-header" id="youtube"><i class="fa-brands fa-youtube"></i> Youtube</div>
+                    {% resource "Kevin Powell" "https://www.youtube.com/@KevinPowell" %}
+                        A channel all about frontend development, with great video tutorials on how to achieve certain effects.
+                    {% endresource %}
+                
+                    {% resource "Web Dev Simplified" "https://www.youtube.com/@WebDevSimplified" %}
+                        Has some nice little video tutorials, as well as an introduction to web development series.
+                    {% endresource %}
+                
+                    {% resource "Fireship" "https://www.youtube.com/@Fireship" %}
+                        A bit more general coding related, along with coding news and humour sprinkled here and there.
                     {% endresource %}
                 </div>
                 
@@ -170,6 +201,10 @@ title: Frontend Resources
                 
                     {% resource "7.css" "https://khang-nd.github.io/7.css/" %}
                         A CSS framework in the style of Windows 7.
+                    {% endresource %}
+
+                    {% resource "augmented-ui" "http://augmented-ui.com" %}
+                        Stylesheets for creating sci-fi inspired UI. They have a mixin mixer that allows you to preview shapes and borders.
                     {% endresource %}
                 </div>
 
@@ -440,6 +475,10 @@ title: Frontend Resources
                     {% resource "Templaterr" "https://templaterr.neocities.org" %}
                         Some navigation snippets and layout templates intended for Neocities.
                     {% endresource %}
+
+                    {% resource "Ayano's Neocities Comment Widget" "https://virtualobserver.moe/ayano/comment-widget" %}
+                        A comment widget that uses google sheets as a database; easy to use and edit.
+                    {% endresource %}
                 </div>
 
                 <div class="resource-box">
@@ -450,6 +489,10 @@ title: Frontend Resources
 
                     {% resource "Darkening/Lightening CSS Variables Like SCSS" "https://stackoverflow.com/questions/55329996/how-to-create-color-shades-using-css-variables-similar-to-darken-of-sass/55330103#55330103" %}
                         Ways to modify plain CSS colour variables like the darken() and lighten() function in SCSS. The solution suggests using color-mix(), but I've mostly used the old answer where the variables are in HSL.
+                    {% endresource %}
+
+                    {% resource "Cut Corners Using CSS" "https://stackoverflow.com/questions/7324722/cut-corners-using-css" %}
+                        Has a variety of different solutions to making a cut corner in CSS, ranging from clip-paths to masks to pseudo-elements.
                     {% endresource %}
                 </div>
             </div>
